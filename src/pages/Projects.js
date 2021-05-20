@@ -31,6 +31,8 @@ const ProjectTile = styled.div`
 
     @media (max-width: 750px) {
         width: 100%;
+        height: 380px;
+        padding-top: 0.5rem;
     }
 `
 
@@ -44,12 +46,18 @@ const ProjectTileBody = styled.p`
     padding-left: 2rem;
     padding-right: 2rem;
     color: black;
+    font-size: 0.9em;
 `
 
 const ProjectHeading = styled.h3`
     font-size: 1.6em;
     color: #283747;
     font-weight: 500;
+
+    @media (max-width: 750px) {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
 `
 
 const ProjectsCarouselContainer = styled.div`
@@ -68,6 +76,10 @@ const ProjectTitle = styled.h1`
     color: #3C1874;
     font-size: 3em;
     font-weight: 500;
+
+    @media (max-width: 750px) {
+        margin-top: -1rem;
+    }
 `
 
 const ProjectLink = styled.a`
