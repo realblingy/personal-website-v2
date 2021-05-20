@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
+import Flickity from 'react-flickity-component'
+import AstroLearningImg from '../assets/projectimages/AstroLearningProj.png'
+import StreamplateImg from '../assets/projectimages/StreamplateProj.png'
+import CustidImg from '../assets/projectimages/CustidProj.png'
+import BigBrainImg from '../assets/projectimages/BigBrainProj.jpg'
+import EggyImg from '../assets/projectimages/EggyProj.png'
 
 const ProjectsContainer = styled.section`
     height: max(100vh, 800px);
@@ -8,16 +14,198 @@ const ProjectsContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 `
 
-function Projects() {
-    return (
-        <Element name="Projects">
-            <ProjectsContainer>
-                
-            </ProjectsContainer>
-        </Element>
-    )
+const ProjectTile = styled.div`
+    width: 33.33%;
+    height: 480px;
+    // margin-left: 3rem;
+    margin-right: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    // box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+`
+
+const ProjectTileImage = styled.img`
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+`
+
+const ProjectTileBody = styled.p`
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: black;
+`
+
+const ProjectHeading = styled.h3`
+    font-size: 1.6em;
+    color: #283747;
+    font-weight: 500;
+`
+
+const ProjectsCarouselContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+`
+
+const ProjectTitle = styled.h1`
+    color: #3C1874;
+    font-size: 3em;
+    font-weight: 500;
+`
+
+const ProjectLink = styled.a`
+    position: absolute;
+    bottom: 20px;
+`
+
+const ButtonGroup = styled.div`
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-evenly;
+`
+
+const PlayButton = styled.button`
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #646568;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: ${props => props.flipped && 'scaleX(-1)'};
+    font-size: 1.2em;
+    color: white;
+
+    &:hover {
+        filter: opacity(0.8);
+    }
+
+    &:active {
+        filter: opacity(0.7);
+    }
+`
+
+const flickityOptions = {
+    wrapAround: true,
+    contain: true,
+    initialIndex: 2,
+    pageDots: false,
+}
+
+const projects = [
+    {
+        title: 'Astro Learning',
+        body: "Full-stack solution using React, ExpressJS and MongoDB. The application allows students to access their class lectures, activities and grades in one application.",
+        image: AstroLearningImg,
+        linkType: 'Website Link',
+        link: 'https://main.df81bq9lkohn2.amplifyapp.com/'
+    },
+    {
+        title: 'Streamplate',
+        body: "A responsive website for a startup I am interning at, Streamplate.",
+        image: StreamplateImg,
+        link: "https://main.djq2nwguiye6h.amplifyapp.com/",
+        linkType: 'Website Link',
+    },
+    {
+        title: 'Custid Apps',
+        body: 'React application that lets customers preview their personalised gifts, deployed with AWS. This was built for a local popular business Custid.',
+        image: CustidImg,
+        link: 'https://master.dbbwtr4hix4m3.amplifyapp.com/',
+        linkType: 'Website Link',
+    },
+    {
+        title: 'Eggy',
+        body: "Web application so users can find the lowest price of any retail item. They can also save any good prices they've found onto their wishlist, hooked to an SQL database.",
+        link: 'https://www.youtube.com/watch?v=8xZknpC2YQs&ab_channel=JamesDang',
+        image: EggyImg,
+        linkType: 'Youtube Link',
+    },
+    {
+        title: 'BigBrain',
+        body: "A Kahoot imitation game which is linked to an Express server. Users could make, host and play their own quizzes. This was made for a university group assignment.",
+        link: 'https://www.youtube.com/watch?v=Xai-UbkkmQY&feature=emb_title&ab_channel=JamesDang',
+        image: BigBrainImg,
+        linkType: 'Youtube Link',
+    },
+    
+]
+
+class Projects extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            flkty: null,
+        }
+        this.nextItem = this.nextItem.bind(this);
+        this.prevItem = this.prevItem.bind(this);
+    }
+
+    nextItem = () => {
+        this.flkty.next();
+    }
+
+    prevItem = () => {
+        this.flkty.previous();
+    }
+
+    render() {
+        return (
+            <Element name="Projects">
+                <ProjectsContainer>
+                    <ProjectTitle>Projects</ProjectTitle>
+                    <ProjectsCarouselContainer>
+                        <Flickity
+                            className={"projects-carousel"}
+                            options={flickityOptions}
+                            flickityRef={ref => this.flkty = ref}
+                        >
+                            {
+                                projects.map(({ title, body, link, image, linkType }) => (
+                                    <ProjectTile>
+                                        <ProjectTileImage src={image}/>
+                                        <ProjectHeading>{title}</ProjectHeading>
+                                        <ProjectTileBody>
+                                            {body}
+                                        </ProjectTileBody>
+                                        <ProjectLink href={link} target="_blank">{linkType}</ProjectLink>
+                                    </ProjectTile>
+                                ))
+                            }
+                        </Flickity>
+                        <ButtonGroup>
+                            <PlayButton onClick={this.prevItem}>
+                            ᐸ
+                            </PlayButton>
+                            <PlayButton flipped={true} onClick={this.nextItem}>
+                            ᐸ
+                            </PlayButton>
+                        </ButtonGroup>
+                    </ProjectsCarouselContainer>
+                </ProjectsContainer>
+            </Element>
+        )
+    }
 }
 
 export default Projects

@@ -7,17 +7,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #3C1874;
   background-color: #F3F3F3;
+  overflow-x: hidden;
 }
 
 html, body, #root {
   height: 100%;
 }
 
-section {
-
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  left: -100px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* border-radius: 10px; */
+  /* -webkit-box-shadow: inset 0 0 6px  */
+  background-color: rgba(191, 191, 191, 1);;
+}
+
+/* ::-webkit-scrollbar-track {
+  color: #3C1874;
+} */

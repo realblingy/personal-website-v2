@@ -43,7 +43,7 @@ const links = ["Home", "About", "Projects", "Contact"]
 
 function NavBar() {
 
-    const [currLink, setCurrLink] = useState(0);
+    // const [currLink, setCurrLink] = useState(0);
     const [showMenuBar, setMenuBar] = useState(false);
 
     useEffect(() => {
@@ -62,11 +62,12 @@ function NavBar() {
                 links.map((link, idx) => (
                     <NavLink
                         smooth
-                        selected={idx === currLink}
-                        onClick={() => {
-                            setCurrLink(idx);
-                        }}
+                        // selected={idx === currLink}
+                        // onClick={() => {
+                        //     setCurrLink(idx);
+                        // }}
                         to={link}
+                        ignoreCancelEvents
                     >
                         {link}
                     </NavLink>

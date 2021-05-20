@@ -19,9 +19,11 @@ const AboutContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 
     @media(max-width: 750px) {
         flex-direction: column;
+        font-size: 0.9em;
     }
 `
 
@@ -42,16 +44,45 @@ const InfoContainer = styled.div`
 
     @media(max-width: 750px) {
         width: 90%;
+        overflow-y: scroll;
     }
 
     @media (max-width: 500px) {
-        font-size: max(0.7em, 3.8vw);
+        height: 60%;
+    }
+
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        margin-top: 1rem;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        margin-top: 1rem;
+        width: 12px;
+        margin-right: 1rem;
+        border: solid 3px transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(191, 191, 191, 0.8);
+        box-shadow: inset 0 0 10px 10px rgba(191, 191, 191, 0.8);
+        border-radius: 10px;
+        border: solid 3px transparent
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        background-color: transparent;
     }
       
 `
 const Heading = styled.h1`
     font-size: 2.5em;
     text-align: center;
+    font-weight: 500;
 `
 
 const LogoImage = styled(animated.img)`
@@ -77,7 +108,7 @@ const LogoGroup = styled.div`
     }
 `
 
-function About() {
+function About({ ref }) {
 
     const LogoSpring = useSpring({
         loop: true,
@@ -137,7 +168,7 @@ function About() {
     ];
 
     return (
-        <Element name="About">
+        <Element name="About" ref={ref}>
             <AboutContainer>
                 <LogoGroup>
                     <LogoImage style={LogoSpring} width="60px" height="50px" src={ReactLogo} />
@@ -145,7 +176,7 @@ function About() {
                     <LogoImage style={LogoSpring} width="55px" height="40px" src={AWSLogo} />
                     <LogoImage style={LogoSpring} width="90px" src={KubernetesLogo} />
                 </LogoGroup>
-                <InfoContainer>
+                <InfoContainer className="infoContainer">
                     <Heading>About Me</Heading>
                     <p>
                         Hey everyone! I’m in my final year studying Computer Science at the University of New South Wales, averaging a Distinction WAM in computing courses.

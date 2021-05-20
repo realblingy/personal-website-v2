@@ -1,22 +1,25 @@
+import { useRef } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import { Element } from 'react-scroll';
+import Contact from './pages/Contact';
 
 function App() {
 
   return (
-    <Element name="Projects">
-      <NavBar/>
+    <>
+      <NavBar />
       {/* <Switch> */}
         <Home />
         <About />
         <Projects />
+        <Contact />
         {/* <Home/>        */}
       {/* </Switch> */}
-    </Element>
+    </>
   );
 }
 
