@@ -47,6 +47,10 @@ const ProjectTileBody = styled.p`
     padding-right: 2rem;
     color: black;
     font-size: 0.9em;
+
+    @media (max-width: 750px) {
+        font-size: 0.8em;
+    }
 `
 
 const ProjectHeading = styled.h3`
