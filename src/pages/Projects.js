@@ -155,14 +155,7 @@ const projects = [
         link: 'https://www.youtube.com/watch?v=8xZknpC2YQs&ab_channel=JamesDang',
         image: EggyImg,
         linkType: 'Youtube Link',
-    },
-    {
-        title: 'BigBrain',
-        body: "A Kahoot imitation game which is linked to an Express server. Users could make, host and play their own quizzes. This was made for a university group assignment.",
-        link: 'https://www.youtube.com/watch?v=Xai-UbkkmQY&feature=emb_title&ab_channel=JamesDang',
-        image: BigBrainImg,
-        linkType: 'Youtube Link',
-    },
+    }
     
 ]
 
