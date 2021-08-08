@@ -220,7 +220,7 @@ function Home() {
                                     James<br/>Dang
                                 </Name>
                                 <Job>
-                                    Web Developer @ <br/> Streamplate
+                                    Junior Software Engineer @ <br/> Workflow86
                                 </Job>
                             </ProfileInfoGroup>
                             <ProfilePhotoGroup>

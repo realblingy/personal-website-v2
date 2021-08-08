@@ -185,7 +185,8 @@ function About({ ref }) {
                         I’m mainly interested in web development, having hands-on experience with React, Node.js, MongoDB, AWS, Docker and Kubernetes. 
                     </p>
                     <p>
-                        Regarding work experience, I have interned as a Software Developer at Success Tutoring, building a self-serve kiosk to replace administrator roles. As of now, I am working at Streamplate as a Web App Developer, building the next UberEats ordering service!
+                        Regarding work experience, I have interned as a Software Developer at Success Tutoring, building a self-serve kiosk to replace administrator roles. As of now, I've also worked at Streamplate as a Web App Developer, building the next UberEats ordering service!
+                        I am now a Junior Software Engineer working in the full-stack development process.
                     </p>
                     <p>
                         When I’m not coding, I am teaching high school Mathematics on the weekend.
