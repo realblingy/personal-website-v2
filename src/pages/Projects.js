@@ -133,7 +133,7 @@ const projects = [
         body: "Full-stack solution using React, ExpressJS and MongoDB. The application allows students to access their class lectures, activities and grades in one application. WIP",
         image: AstroLearningImg,
         linkType: 'Website Link',
-        link: 'https://main.d2288cor15rn93.amplifyapp.com/'
+        link: 'https://main.d25w2a42ioym0x.amplifyapp.com/'
     },
     {
         title: 'Streamplate',
