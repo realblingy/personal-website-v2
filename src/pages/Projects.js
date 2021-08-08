@@ -130,10 +130,10 @@ const flickityOptions = {
 const projects = [
     {
         title: 'Astro Learning',
-        body: "Full-stack solution using React, ExpressJS and MongoDB. The application allows students to access their class lectures, activities and grades in one application.",
+        body: "Full-stack solution using React, ExpressJS and MongoDB. The application allows students to access their class lectures, activities and grades in one application. WIP",
         image: AstroLearningImg,
         linkType: 'Website Link',
-        link: 'https://main.df81bq9lkohn2.amplifyapp.com/'
+        link: 'https://main.d2288cor15rn93.amplifyapp.com/'
     },
     {
         title: 'Streamplate',
