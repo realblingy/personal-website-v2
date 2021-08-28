@@ -5,6 +5,7 @@ import Flickity from 'react-flickity-component'
 import AstroLearningImg from '../assets/projectimages/AstroLearningProj.png'
 import StreamplateImg from '../assets/projectimages/StreamplateProj.png'
 import CustidImg from '../assets/projectimages/CustidProj.png'
+import PTPImg from '../assets/projectimages/PTP.jpg'
 import BigBrainImg from '../assets/projectimages/BigBrainProj.jpg'
 import EggyImg from '../assets/projectimages/EggyProj.png'
 
@@ -129,15 +130,15 @@ const flickityOptions = {
 
 const projects = [
     {
-        title: 'Astro Learning',
-        body: "Full-stack solution using React, ExpressJS and MongoDB. The application allows students to access their class lectures, activities and grades in one application. WIP",
-        image: AstroLearningImg,
-        linkType: 'Website Link',
-        link: 'https://main.d25w2a42ioym0x.amplifyapp.com/'
+        title: 'PTP Protocol',
+        body: "A networking protocol that simulates TCP, built on top of UDP, without congestion control.",
+        image: PTPImg,
+        linkType: 'Github Link',
+        link: 'https://github.com/realblingy/COMP3331'
     },
     {
         title: 'Streamplate',
-        body: "A responsive website for a startup I am interning at, Streamplate.",
+        body: "A responsive landing website for a startup I interned at, Streamplate.",
         image: StreamplateImg,
         link: "https://main.djq2nwguiye6h.amplifyapp.com/",
         linkType: 'Website Link',

@@ -182,14 +182,14 @@ function About({ ref }) {
                         Hey everyone! I’m in my final year studying Computer Science at the University of New South Wales, averaging a Distinction WAM in computing courses.
                     </p>
                     <p>
-                        I’m mainly interested in web development, having hands-on experience with React, Node.js, MongoDB, AWS, Docker and Kubernetes. 
+                        I’m mainly interested in web development, having hands-on experience with React, Node.js, MongoDB, AWS, Docker, and many more. 
                     </p>
                     <p>
-                        Regarding work experience, I have interned as a Software Developer at Success Tutoring, building a self-serve kiosk to replace administrator roles. As of now, I've also worked at Streamplate as a Web App Developer, building the next UberEats ordering service!
-                        I am now a Junior Software Engineer working in the full-stack development process.
+                        Regarding industrial experience, I have undertaken three software developer internships at Success Tutoring, Smartplace
+                        and Streamplate. Now, I am a Junior Software Engineer at Workflow86, working on the company's full stack.
                     </p>
                     <p>
-                        When I’m not coding, I am teaching high school Mathematics on the weekend.
+                        When I’m not coding, I am teaching high school Mathematics on the weekend. I'm also planning to launch a tutoring centre next year.
                     </p>
                 </InfoContainer>
                 <LogoGroup>
