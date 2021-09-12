@@ -17,7 +17,7 @@ const AboutContainer = styled.section`
     margin-bottom: 100px;
 
     @media(max-width: 750px) {
-        margin-top: 300px;
+        margin-top: 100px;
         flex-direction: column;
         font-size: 0.9em;
     }
