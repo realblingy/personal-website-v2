@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Element } from 'react-scroll';
 import PikachuGif from '../assets/pikachu.gif'
 import { Fade, Grow, Slide, Typography } from '@material-ui/core';
-import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@material-ui/lab';
+import { Timeline, TimelineConnector, TimelineContent, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@material-ui/lab';
 import SkillIcons from '../components/SkillIcons';
 import ReactVisibilitySensor from 'react-visibility-sensor';
 
@@ -141,7 +141,7 @@ function About({ ref }) {
                         <Fade in={loaded} timeout={1000}>
                             <div style={{ width: '100%', display: 'flex', alignItems: 'center' }}>
                                 <Heading>About Me</Heading>
-                                <img style={{ width: '80px', height: '60px' }} src={PikachuGif} />
+                                <img alt="Pikachu Gif" style={{ width: '80px', height: '60px' }} src={PikachuGif} />
                             </div>
                         </Fade>
                     </ReactVisibilitySensor>

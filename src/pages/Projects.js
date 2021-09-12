@@ -15,8 +15,8 @@ const ProjectsContainer = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 400px;
     padding-top: 80px;
+    padding-bottom: 300px;
 `
 
 const ProjectTile = styled(Card)`
@@ -31,12 +31,12 @@ const ProjectTile = styled(Card)`
     padding-top: 1rem;
     margin-bottom: 1rem;
    
-
     && {
         background-color: transparent;
         border: solid 1px gray;
+        transition: 0.2s;
+        
         &:hover {
-            
             background-color: #7854AF;
         }
     }
@@ -53,18 +53,13 @@ const ProjectTileBody = styled.p`
     padding-right: 2rem;
     color: white;
     font-size: 0.9em;
-
+    margin-top: 0rem;
 `
 
 const ProjectHeading = styled.h3`
     font-size: 1.6em;
     color: white;
     font-weight: 500;
-
-    @media (max-width: 750px) {
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
 `
 
 const ProjectsCarouselContainer = styled.div`
@@ -74,10 +69,6 @@ const ProjectsCarouselContainer = styled.div`
     justify-content: center;
     flex-wrap:wrap;
     width: 100%;
-
-    @media (max-width: 900px) {
-        width: 100%;
-    }
     
 `
 
@@ -85,10 +76,6 @@ const ProjectTitle = styled.h1`
     color: white;
     font-size: 3em;
     font-weight: 500;
-
-    @media (max-width: 750px) {
-        margin-top: -1rem;
-    }
 `
 
 const projects = [
@@ -135,15 +122,15 @@ const Projects = () => {
                     {
                         projects.map(({ title, body, link, image, linkType }, idx) => (
                             <Grow in={loaded} timeout={1000 + idx * 300}>
-                                <ProjectTile>
-                                    <a target="_blank" href={link} style={{ textAlign: 'center', textDecoration: 'none' }}>
+                                <a target="_blank" rel="noreferrer" href={link} style={{ textAlign: 'center', textDecoration: 'none' }}>
+                                    <ProjectTile> 
                                         <ProjectTileImage src={image}/>
                                         <ProjectHeading>{title}</ProjectHeading>
                                         <ProjectTileBody>
                                             {body}
                                         </ProjectTileBody>
-                                    </a>
-                                </ProjectTile>
+                                    </ProjectTile>
+                                </a>
                             </Grow>
                         ))
                     }

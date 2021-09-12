@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring'
 import { easeQuadInOut } from "d3-ease";
 import { Element } from 'react-scroll';
-import { Grow, Slide, Tooltip } from '@material-ui/core';
+import { Grow, Tooltip } from '@material-ui/core';
 import TypeWriterEffect from 'react-typewriter-effect';
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub} from 'react-icons/ai'
+import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from 'react-icons/ai'
 import SakuraGif from '../assets/sakura.gif'
 import ProfileImage from '../assets/Me.png'
 
@@ -138,7 +138,7 @@ const LinkedInButton = styled(AiFillLinkedin)`
     transition: 0.2s;
 
     &:hover {
-        color: #7854AF;
+        transform: scale(1.2);
     }
 `
 
@@ -148,7 +148,7 @@ const InstagramButton = styled(AiFillInstagram)`
     transition: 0.2s;
 
     &:hover {
-        color: #7854AF;
+        transform: scale(1.2);
     }
 `
 
@@ -158,7 +158,7 @@ const GithubButton = styled(AiFillGithub)`
     transition: 0.2s;
 
     &:hover {
-        color: #7854AF;
+        transform: scale(1.2);
     }
 `
 

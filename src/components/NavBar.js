@@ -63,7 +63,7 @@ function NavBar() {
                 setMenuBar(false);
             }
         })
-    }, [])
+    }, [showMenuBar])
 
     return (
         <NavBarContainer>
