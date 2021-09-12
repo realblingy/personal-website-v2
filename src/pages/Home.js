@@ -5,7 +5,7 @@ import { easeQuadInOut } from "d3-ease";
 import { Element } from 'react-scroll';
 import { Grow, Tooltip } from '@material-ui/core';
 import TypeWriterEffect from 'react-typewriter-effect';
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from 'react-icons/ai'
+import { AiFillLinkedin, AiFillInstagram, AiFillGithub} from 'react-icons/ai'
 import SakuraGif from '../assets/sakura.gif'
 import ProfileImage from '../assets/Me.png'
 
@@ -14,12 +14,11 @@ const HomeContainer = styled.section`
     justify-content: center;
     align-items: center;
     z-index: 1;
-    height: min(100vh);
-    min-height: 700px;
+    height: min(100vh, 700px);
     width: 100%;
 
-    @media(max-width: 500px) {
-        height: 650px;
+    @media (max-width: 600px) {
+        height: 700px;
     }
 `
 

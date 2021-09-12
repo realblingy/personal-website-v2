@@ -17,6 +17,7 @@ const AboutContainer = styled.section`
     margin-bottom: 100px;
 
     @media(max-width: 750px) {
+        margin-top: 300px;
         flex-direction: column;
         font-size: 0.9em;
     }
@@ -178,9 +179,9 @@ function About({ ref }) {
                     >
 
                         {jobs.map( ({ date, description, job, image }, idx) => (
-                            <Slide direction="left" in={loaded} timeout={500 + idx * 500}>
+                            <Grow in={loaded} timeout={500 + idx * 500}>
                                 {renderTimelineContent(date, job, description, image)}
-                            </Slide>
+                            </Grow>
                         ))}
                     </Timeline>
                     <Grow in={loaded} timeout={1500}>
