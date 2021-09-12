@@ -93,11 +93,11 @@ const ProjectTitle = styled.h1`
 
 const projects = [
     {
-        title: 'Astro Learning',
-        body: "Full-stack solution using React, ExpressJS and MongoDB. The application allows students to access their class lectures, activities and grades in one application. WIP",
-        image: AstroLearningImg,
-        linkType: 'Website Link',
-        link: 'https://main.d25w2a42ioym0x.amplifyapp.com/'
+        title: 'PTP Protocol',
+        body: "A networking protocol that simulates TCP, built on top of UDP, without congestion control.",
+        image: PTPImg,
+        linkType: 'Github Link',
+        link: 'https://github.com/realblingy/COMP3331'
     },
     {
         title: 'Custid Apps',
