@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring'
 import { easeQuadInOut } from "d3-ease";
 import { Element } from 'react-scroll';
-import { Slide, Tooltip } from '@material-ui/core';
+import { Grow, Slide, Tooltip } from '@material-ui/core';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { AiFillLinkedin, AiFillInstagram, AiFillGithub} from 'react-icons/ai'
 import SakuraGif from '../assets/sakura.gif'
@@ -14,7 +14,7 @@ const HomeContainer = styled.section`
     justify-content: center;
     align-items: center;
     z-index: 1;
-    height: min(100vh, 800px);
+    height: min(100vh);
     min-height: 700px;
     width: 100%;
 `
@@ -188,7 +188,7 @@ function Home() {
             <HomeContainer>
                 <SakuraImage src={SakuraGif} />
                 <MainProfileGroup>
-                    <Slide in timeout={1000}>
+                    <Grow in timeout={1000}>
                         <ProfileInfoGroup>
                             <Name>
                                 James<br/>Dang
@@ -227,8 +227,8 @@ function Home() {
                                 </Tooltip>
                             </div>
                         </ProfileInfoGroup>
-                    </Slide>
-                    <Slide in timeout={1200}>
+                    </Grow>
+                    <Grow in timeout={1500}>
                         <ProfilePhotoGroup>
                             <ProfileBubble style={ProfileBubbleSpring} src={ProfileImage} />
                             <ProfileUniInfo style={ProfileBubbleSpring}>
@@ -236,7 +236,7 @@ function Home() {
                                 <span>Computer Science</span>
                             </ProfileUniInfo>
                         </ProfilePhotoGroup>
-                    </Slide>
+                    </Grow>
                 </MainProfileGroup>
             </HomeContainer>
         </Element>
