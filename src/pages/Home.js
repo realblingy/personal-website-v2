@@ -17,6 +17,10 @@ const HomeContainer = styled.section`
     height: min(100vh);
     min-height: 700px;
     width: 100%;
+
+    @media(max-width: 500px) {
+        height: 650px;
+    }
 `
 
 const SakuraImage = styled.img`
