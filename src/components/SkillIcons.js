@@ -14,6 +14,7 @@ const SkillsIconGroup = styled.div`
 const IconCss = css`
     transition: 0.2s;
     margin-right: 2rem;
+    margin-bottom: 1rem;
 `
 
 const JSIcon = styled(SiJavascript)`

@@ -14,7 +14,8 @@ const HomeContainer = styled.section`
     justify-content: center;
     align-items: center;
     z-index: 1;
-    height: min(100vh, 1200px);
+    height: min(100vh, 800px);
+    min-height: 700px;
     width: 100%;
 `
 
