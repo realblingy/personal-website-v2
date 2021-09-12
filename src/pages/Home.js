@@ -19,7 +19,7 @@ const HomeContainer = styled.section`
     min-height: 700px;
 
     @media (max-width: 600px) {
-        height: 700px;
+        height: 550px;
     }
 `
 
