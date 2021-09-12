@@ -23,7 +23,8 @@ const ProjectTile = styled(Card)`
     width: 300px;
     height: 400px;
     cursor: pointer;
-    margin-right: 1rem;
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
     background-color: white;
     display: flex;
     flex-direction: column;
