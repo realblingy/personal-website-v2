@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 const NavBarContainer = styled.div`
-    width: 450px;
+    width: 350px;
     height: 45px;
     background-color: #7854AF;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 10px;
     border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,8 +23,11 @@ const NavBarContainer = styled.div`
 
     @media (max-width: 750px) {
         width: 100%;
-        border-bottom-left-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        right: 0;
         font-size: 90%;
+        justify-content: center;
     }
 `
 
@@ -37,9 +41,14 @@ const NavLink = styled(Link)`
     &:hover {
         filter: opacity(0.8);
     }
+
+    @media (max-width: 750px) {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
 `
 
-const links = ["Home", "About", "Projects", "Contact"]
+const links = ["Home", "About", "Projects"]
 
 function NavBar() {
 
@@ -62,10 +71,6 @@ function NavBar() {
                 links.map((link, idx) => (
                     <NavLink
                         smooth
-                        // selected={idx === currLink}
-                        // onClick={() => {
-                        //     setCurrLink(idx);
-                        // }}
                         to={link}
                         ignoreCancelEvents
                     >

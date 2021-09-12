@@ -69,8 +69,8 @@ function Contact() {
     return (
         <Element name="Contact">
             <ContactContainer>
-                <p style={{ fontSize: '2em' }}>Social Media (In the works...)</p>
-                <p>Instagram: @jamespdvng</p>
+                <p style={{ fontSize: '2em' }}>Social Media</p>
+                <p>Instagram: @jamesdvng</p>
                 <p>Email: jamesphidang@gmail.com</p>
                 <a style={{ textDecoration: 'none', marginTop: '1rem' }} href="https://www.linkedin.com/in/james-dang-05b8331b0/">LinkedIn: Click for my profile</a>
                 {/* <SocialMediaGroup>

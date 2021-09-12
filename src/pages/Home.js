@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import SakuraGif from '../assets/sakura.gif'
-import ProfileImage from '../assets/Me.png';
 import { useSpring, animated } from 'react-spring'
 import { easeQuadInOut } from "d3-ease";
 import { Element } from 'react-scroll';
-
-const LoadingSquare = styled(animated.div)`
-    height: 80px;
-    width: 80px;
-    background-color: #3C1874;
-    border-radius: 10px;
-`
+import { Slide, Tooltip } from '@material-ui/core';
+import TypeWriterEffect from 'react-typewriter-effect';
+import { AiFillLinkedin, AiFillInstagram, AiFillGithub} from 'react-icons/ai'
+import SakuraGif from '../assets/sakura.gif'
+import ProfileImage from '../assets/Me.png'
 
 const HomeContainer = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    height: max(100vh, 800px);
+    height: min(100vh, 1200px);
     width: 100%;
-    font-family: Arial;
 `
 
 const SakuraImage = styled.img`
@@ -40,7 +35,7 @@ const ProfileBubble = styled(animated.img)`
     border-radius: 50%;
     height: 350px;
     width: 350px;
-    border: solid #3C1874 7px;
+    border: solid 6px;
 
     @media (max-width: 750px) {
         width: 250px;
@@ -73,8 +68,6 @@ const MainProfileGroup = styled.div`
 
     @media (max-width: 750px) {
         flex-direction: column-reverse;
-        height: 100%;
-        min-height: 600px;
         min-width: 300px;
         max-width: 300px;
         margin-top: 1rem;
@@ -109,8 +102,8 @@ const ProfileUniInfo = styled(animated.div)`
     box-sizing: border-box;
 
     @media (max-width: 750px) {
-        left: 5%;
-        bottom: 20%;
+        left: 2%;
+        bottom: 15%;
         height: 100px;
         width: 100px;
         font-size: 0.8em;
@@ -121,61 +114,58 @@ const ProfileUniInfo = styled(animated.div)`
 const Name = styled(animated.h1)`
     font-size: 6em;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.4;
     margin-bottom: 0.5rem;
+    color: white;
 `
 
 const Job = styled.h3`
     text-align: center;
     color: black;
     font-size: 1.3em;
+    font-weight: 500;
 
     @media (max-width: 750px) {
         font-size: 1.7em;
     }
 `
 
+const LinkedInButton = styled(AiFillLinkedin)`
+    color: skyblue;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        color: #7854AF;
+    }
+`
+
+const InstagramButton = styled(AiFillInstagram)`
+    color: salmon;
+    cursor: pointer; 
+    transition: 0.2s;
+
+    &:hover {
+        color: #7854AF;
+    }
+`
+
+const GithubButton = styled(AiFillGithub)`
+    color: lightgray;
+    cursor: pointer; 
+    transition: 0.2s;
+
+    &:hover {
+        color: #7854AF;
+    }
+`
+
+const ALink = styled.a`
+    text-decoration: none;
+`
+
 function Home() {
-
-    const [imagesReady, setImagesReady] = useState(false);
-
-    useEffect(() => {
-        const img = new Image();
-        img.onload = () => {
-            setImagesReady(true);
-        }
-        img.src = ProfileImage;
-        // img.src = SakuraGif;
-    }, [])
-
-    useEffect(() => {
-        const profileImage = new Image();
-        const sakuraImage = new Image();
-        profileImage.onload = () => {
-            setImagesReady(true);
-        }
-        sakuraImage.onload = () => {
-            setImagesReady(true);
-        }
-        profileImage.src = ProfileImage;
-        sakuraImage.src = SakuraGif;
-    }, [])
-
-    const LoadingSquareSpring = useSpring({
-        to: {
-            transform: 'rotate(360deg)',
-            opacity: 1
-        },
-        loop: true,
-        from: {
-            transform: 'rotate(0deg)',
-            opacity: 0
-        },
-        config: {
-            duration: 1000,
-        }
-    })
 
     const ProfileBubbleSpring = useSpring({
         to: [
@@ -192,49 +182,61 @@ function Home() {
         }
     })
 
-    const ProfileInfoSpring = useSpring({
-        to: {
-            opacity: 1,
-        },
-        from: {
-            opacity: 0,
-        },
-        config: {
-            duration: 1000,
-            easing: easeQuadInOut
-        }
-    })
-
     return (
         <Element name="Home">
             <HomeContainer>
-                {
-                    !imagesReady ? 
-                        <LoadingSquare style={LoadingSquareSpring} />
-                    : (
-                    <>
-                        <SakuraImage src={SakuraGif} />
-                        <MainProfileGroup>
-                            <ProfileInfoGroup style={ProfileInfoSpring}>
-                                <Name>
-                                    James<br/>Dang
-                                </Name>
-                                <Job>
-                                    Junior Software Engineer @ <br/> Workflow86
-                                </Job>
-                            </ProfileInfoGroup>
-                            <ProfilePhotoGroup>
-                                <ProfileBubble style={ProfileBubbleSpring} src={ProfileImage}/>
-                                <ProfileUniInfo style={ProfileBubbleSpring}>
-                                    <h3 style={{ marginBottom: 0, fontSize: "1.4em" }}>UNSW</h3>
-                                    <span>Computer Science</span>
-                                </ProfileUniInfo>
-                                </ProfilePhotoGroup>
-                        </MainProfileGroup>
-                    </>
-                    )
-
-                }
+                <SakuraImage src={SakuraGif} />
+                <MainProfileGroup>
+                    <Slide in timeout={1000}>
+                        <ProfileInfoGroup>
+                            <Name>
+                                James<br/>Dang
+                            </Name>
+                            <Job>
+                                <TypeWriterEffect
+                                    textStyle={{ color: 'white', fontWeight: '400' }}
+                                    cursorColor="white"
+                                    multiText={[
+                                        'Mathematics Tutor',
+                                        'Software Engineer',
+                                    ]}
+                                    multiTextDelay={2000}
+                                />
+                            </Job>
+                            <div style={{
+                                width: '160px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between'
+                            }}>
+                                <Tooltip title="LinkedIn: James Dang">
+                                    <ALink target="_blank" href="https://www.linkedin.com/in/james-dang-05b8331b0/">
+                                        <LinkedInButton size={40} />
+                                    </ALink>
+                                </Tooltip>
+                                <Tooltip title="Instagram: jamespdang">
+                                    <ALink target="_blank" href="https://www.instagram.com/jamesdvng/">
+                                        <InstagramButton size={40} />
+                                    </ALink>
+                                </Tooltip>
+                                <Tooltip title="Github: realblingy">
+                                    <ALink target="_blank" href="https://github.com/realblingy">
+                                        <GithubButton size={40} />
+                                    </ALink>
+                                </Tooltip>
+                            </div>
+                        </ProfileInfoGroup>
+                    </Slide>
+                    <Slide in timeout={1200}>
+                        <ProfilePhotoGroup>
+                            <ProfileBubble style={ProfileBubbleSpring} src={ProfileImage} />
+                            <ProfileUniInfo style={ProfileBubbleSpring}>
+                                <h3 style={{ marginBottom: 0, fontSize: "1.4em" }}>UNSW</h3>
+                                <span>Computer Science</span>
+                            </ProfileUniInfo>
+                        </ProfilePhotoGroup>
+                    </Slide>
+                </MainProfileGroup>
             </HomeContainer>
         </Element>
     )
