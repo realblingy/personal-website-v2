@@ -31,7 +31,6 @@ const InfoContainer = styled.div`
     border-radius: 30px;
     margin-left: 1rem;
     margin-right: 1rem;
-    overflow-y: hidden;
     color: white;
     text-align: left;
 
