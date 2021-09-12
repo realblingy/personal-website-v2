@@ -93,25 +93,22 @@ const ProjectTitle = styled.h1`
 
 const projects = [
     {
-        title: 'PTP Protocol',
-        body: "A networking protocol that simulates TCP, built on top of UDP, without congestion control.",
-        image: PTPImg,
-        linkType: 'Github Link',
-        link: 'https://github.com/realblingy/COMP3331'
+        title: 'Astro Learning',
+        body: "An education management system where students can access learning resources, check their homework grades and contact their tutors/teachers after learning hours. WIP",
+        image: AstroLearningImg,
+        link: 'https://www.astrolearning.com.au/'
     },
     {
         title: 'Custid Apps',
         body: 'React application that lets customers preview their personalised gifts, deployed with AWS. This was built for a local popular business Custid.',
         image: CustidImg,
         link: 'https://master.dbbwtr4hix4m3.amplifyapp.com/',
-        linkType: 'Website Link',
     },
     {
         title: 'Eggy',
         body: "Web application so users can find the lowest price of any retail item. They can also save any good prices they've found onto their wishlist, hooked to an SQL database.",
         link: 'https://www.youtube.com/watch?v=8xZknpC2YQs&ab_channel=JamesDang',
         image: EggyImg,
-        linkType: 'Youtube Link',
     },
     {
         title: 'PTP Network',
