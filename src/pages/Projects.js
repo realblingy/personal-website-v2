@@ -81,6 +81,12 @@ const ProjectTitle = styled.h1`
 
 const projects = [
   {
+    title: "Astro Learning",
+    body: "A tutoring business located in Southwest Sydney. Check us out!",
+    image: AstroLearningImg,
+    link: "https://www.astrolearning.com.au/",
+  },
+  {
     title: "HODL Genie",
     body: "Funny web app that advises people to either buy, hold or sell stocks using AlphaVantage's API for MacD signals.",
     link: "https://agitated-kalam-ca2112.netlify.app/",
@@ -91,12 +97,6 @@ const projects = [
     body: "Capstone project which allows collaborators/team members to track task progress. Scored an amazing 96 for this!",
     link: "https://johndao.dev/blog/task-master/",
     image: TaskImg,
-  },
-  {
-    title: "Astro Learning",
-    body: "An education management system where students can access learning resources, check their homework grades and contact their tutors/teachers after learning hours. WIP",
-    image: AstroLearningImg,
-    link: "https://www.astrolearning.com.au/",
   },
   {
     title: "Custid Apps",
@@ -133,7 +133,7 @@ const Projects = () => {
         </ReactVisibilitySensor>
         <ProjectsCarouselContainer>
           {projects.map(({ title, body, link, image, linkType }, idx) => (
-            <Grow in={loaded} timeout={1000 + idx * 300}>
+            <Grow key={title} in={loaded} timeout={1000 + idx * 300}>
               <a
                 target="_blank"
                 rel="noreferrer"
