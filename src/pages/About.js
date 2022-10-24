@@ -98,7 +98,20 @@ const renderTimelineContent = (date, job, description, image) => {
 
 const jobs = [
   {
-    date: "Aug 2021 - Present",
+    date: "Aug 2022 - Present",
+    job: "Software Developer - nib Health Group",
+    description: `Full-stack role working on a React, .NET and TypeScript environment.`,
+    image:
+      "https://hunterheadline.com.au/wp-content/uploads/2016/10/NIB.jpg"
+  },
+  {
+    date: "Feb 2022 - Present",
+    job: "Founder & Head Math Tutor - Astro Learning",
+    description: `Helping kids not hate Math :P`,
+    image: "https://scontent.fsyd10-2.fna.fbcdn.net/v/t39.30808-6/271548808_101560032423426_7550618777717685797_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fyu9NuU38uMAX-MuZ65&tn=roEr3Oz2rVCyZp3q&_nc_ht=scontent.fsyd10-2.fna&oh=00_AT8GYPdkbVpQiv_T9qULj5gkFUihwLMZ1K5o51sHfBtbBw&oe=635C3220"
+  },
+  {
+    date: "Aug 2021 - Aug 2022",
     job: "Junior Software Engineer - Workflow86",
     description: `Maintained and implemented new features to the existing software.
          Followed agile methodologies and worked with microservices architecture, CI/CD and
@@ -163,23 +176,17 @@ function About({ ref }) {
               <h3>Bio</h3>
               <p>
                 Hey everyone! I’m a Computer Science graduate of the University
-                of New South Wales, now Software Engineer at Workflow86. I'm
-                also the founder of Astro Learning, a tutoring business based in
-                Sydney.
+                of New South Wales, currently working as a Software Developer at nib Health Group. I
+                also started my own tutoring business, Astro Learning, which is based in 
+                south west Sydney.
               </p>
               <p>
-                I’m mainly interested in web development, having industrial
+                I’m have a keen interest in web development, with industrial
                 experience with React, Node.js, Spring Boot, MongoDB,
                 PostgreSQL, and many other technologies.
               </p>
               <p>
-                As for hobbies, I like to play League of Legends (although I'm
-                not that good) and watch Netflix (if that counts).
-              </p>
-              <p>
-                I also teach Mathematics to high school students! So if you're
-                looking for help with your studies, feel free to send me a
-                message.
+                In my spare time, I play League of Legends and hang out with my mates.
               </p>
               <h3>Work Experience</h3>
             </div>

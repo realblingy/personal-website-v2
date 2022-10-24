@@ -4,10 +4,10 @@ import { useSpring, animated } from 'react-spring'
 import { easeQuadInOut } from "d3-ease";
 import { Element } from 'react-scroll';
 import { Grow, Tooltip } from '@material-ui/core';
-import TypeWriterEffect from 'react-typewriter-effect';
-import { AiFillLinkedin, AiFillInstagram, AiFillGithub} from 'react-icons/ai'
+import { AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import SakuraGif from '../assets/sakura.gif'
 import ProfileImage from '../assets/Me.png'
+import Typewriter from 'typewriter-effect';
 
 const HomeContainer = styled.section`
     display: flex;
@@ -125,11 +125,13 @@ const Name = styled(animated.h1)`
     color: white;
 `
 
-const Job = styled.h3`
+const Job = styled.p`
     text-align: center;
-    color: black;
+    color: white;
     font-size: 1.3em;
     font-weight: 500;
+    width: 300px;
+    text-overflow: wrap;
 
     @media (max-width: 750px) {
         font-size: 1.7em;
@@ -146,15 +148,6 @@ const LinkedInButton = styled(AiFillLinkedin)`
     }
 `
 
-const InstagramButton = styled(AiFillInstagram)`
-    color: salmon;
-    cursor: pointer; 
-    transition: 0.2s;
-
-    &:hover {
-        transform: scale(1.2);
-    }
-`
 
 const GithubButton = styled(AiFillGithub)`
     color: lightgray;
@@ -169,6 +162,13 @@ const GithubButton = styled(AiFillGithub)`
 const ALink = styled.a`
     text-decoration: none;
 `
+
+const thoughts = [
+    'Founder of Astro Learning',
+    'Software Developer @ nib',
+    'React/TypeScript/Node.js',
+    'Plat IV League of Legends Player',
+]
 
 function Home() {
 
@@ -198,18 +198,18 @@ function Home() {
                                 James<br/>Dang
                             </Name>
                             <Job>
-                                <TypeWriterEffect
-                                    textStyle={{ color: 'white', fontWeight: '400' }}
-                                    cursorColor="white"
-                                    multiText={[
-                                        'Mathematics Tutor',
-                                        'Software Engineer',
-                                    ]}
-                                    multiTextDelay={2000}
+                                <Typewriter
+                                    options={{
+                                        strings: thoughts,
+                                        delay: 50,
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                    changeDeleteSpeed={60}
                                 />
                             </Job>
                             <div style={{
-                                width: '160px',
+                                width: '100px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'space-between'
@@ -217,11 +217,6 @@ function Home() {
                                 <Tooltip title="LinkedIn: James Dang">
                                     <ALink target="_blank" href="https://www.linkedin.com/in/james-dang-05b8331b0/">
                                         <LinkedInButton size={40} />
-                                    </ALink>
-                                </Tooltip>
-                                <Tooltip title="Instagram: jamespdang">
-                                    <ALink target="_blank" href="https://www.instagram.com/jamesdvng/">
-                                        <InstagramButton size={40} />
                                     </ALink>
                                 </Tooltip>
                                 <Tooltip title="Github: realblingy">

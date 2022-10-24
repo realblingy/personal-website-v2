@@ -82,39 +82,39 @@ const ProjectTitle = styled.h1`
 const projects = [
   {
     title: "Astro Learning",
-    body: "A tutoring business located in Southwest Sydney. Check us out!",
+    body: "My tutoring business that's located in Southwest Sydney. We have over 10+ students enrolled and still growing!",
     image: AstroLearningImg,
     link: "https://www.astrolearning.com.au/",
-  },
-  {
-    title: "HODL Genie",
-    body: "Funny web app that advises people to either buy, hold or sell stocks using AlphaVantage's API for MacD signals.",
-    link: "https://agitated-kalam-ca2112.netlify.app/",
-    image: WSBImg,
-  },
-  {
-    title: "TaskMaster",
-    body: "Capstone project which allows collaborators/team members to track task progress. Scored an amazing 96 for this!",
-    link: "https://johndao.dev/blog/task-master/",
-    image: TaskImg,
-  },
-  {
-    title: "Custid Apps",
-    body: "React application that lets customers preview their personalised gifts, deployed with AWS. This was built for a local popular business Custid.",
-    image: CustidImg,
-    link: "https://master.dbbwtr4hix4m3.amplifyapp.com/",
-  },
-  {
-    title: "Eggy",
-    body: "Web application so users can find the lowest price of any retail item. They can also save any good prices they've found onto their wishlist, hooked to an SQL database.",
-    link: "https://www.youtube.com/watch?v=8xZknpC2YQs&ab_channel=JamesDang",
-    image: EggyImg,
   },
   {
     title: "PTP Network",
     body: "A network protocol that implements a subset of TCP's featured. It includes triple duplicate ACK fast retransmit, packet loss simulation and sequence numbers.",
     link: "https://github.com/realblingy/COMP3331",
     image: PTPImg,
+  },
+  {
+    title: "HODL Genie",
+    body: "Funny web app that advises people to either buy, hold or sell stocks using AlphaVantage's API. (NOTE: THIS IS NO LONGER MAINTAINED)",
+    link: "https://agitated-kalam-ca2112.netlify.app/",
+    image: WSBImg,
+  },
+  {
+    title: "TaskMaster",
+    body: "University final project which allows collaborators/coworkers to track task progress. Amazing article written by one of the team members, John Dao.",
+    link: "https://johndao.dev/blog/task-master/",
+    image: TaskImg,
+  },
+  {
+    title: "Custid Apps",
+    body: "Web app that lets customers preview their personalised gifts. This was built for a local popular business Custid.",
+    image: CustidImg,
+    link: "https://master.dbbwtr4hix4m3.amplifyapp.com/",
+  },
+  {
+    title: "Eggy",
+    body: "My first personal project where users could find the lowest prices on popular retail items.",
+    link: "https://www.youtube.com/watch?v=8xZknpC2YQs&ab_channel=JamesDang",
+    image: EggyImg,
   },
 ];
 
