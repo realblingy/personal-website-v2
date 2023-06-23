@@ -11,6 +11,8 @@ import {
   SiGit,
   SiJava,
   SiJira,
+  SiAmazonaws,
+  SiDotNet,
 } from "react-icons/si";
 import { Tooltip } from "@material-ui/core";
 import { CgPokemon } from "react-icons/cg";
@@ -31,86 +33,42 @@ const IconCss = css`
 
 const JSIcon = styled(SiJavascript)`
   ${IconCss};
-  &:hover {
-    color: yellow;
-  }
+  color: yellow;
 `;
 
 const TSIcon = styled(SiTypescript)`
   ${IconCss};
-  &:hover {
-    color: #037acc;
-  }
+  color: #037acc;
 `;
 
 const ReactIcon = styled(SiReact)`
   ${IconCss};
-  &:hover {
-    color: #00d9ff;
-  }
+  color: #00d9ff;
 `;
 
 const NodeIcon = styled(SiNodeDotJs)`
   ${IconCss};
-  &:hover {
-    color: green;
-  }
+  color: green;
 `;
 
-const SpringIcon = styled(SiSpring)`
+const DotNetICcon = styled(SiDotNet)`
   ${IconCss};
-  &:hover {
-    color: lightgreen;
-  }
+  color: gray;
 `;
 
-const PythonIcon = styled(SiPython)`
+const AWSIcon = styled(SiAmazonaws)`
   ${IconCss};
-  &:hover {
-    color: #037acc;
-  }
-`;
-
-const ReduxIcon = styled(SiRedux)`
-  ${IconCss};
-  &:hover {
-    color: purple;
-  }
-`;
-
-const FlaskIcon = styled(SiFlask)`
-  ${IconCss};
-  &:hover {
-    color: white;
-  }
+    color: orange;
 `;
 
 const GitIcon = styled(SiGit)`
   ${IconCss};
-  &:hover {
-    color: #ff7f7f;
-  }
+  color: #ff7f7f;
 `;
 
 const JavaIcon = styled(SiJava)`
   ${IconCss};
-  &:hover {
-    color: orange;
-  }
-`;
-
-const JiraIcon = styled(SiJira)`
-  ${IconCss};
-  &:hover {
-    color: #0096ff;
-  }
-`;
-
-const PokemonIcon = styled(CgPokemon)`
-  ${IconCss};
-  &:hover {
-    color: yellow;
-  }
+  color: #fa8072;
 `;
 
 const IconContainer = styled.div`
@@ -147,44 +105,24 @@ const SkillIcons = () => {
           <NodeIcon size={40} />
         </IconContainer>
       </Tooltip>
-      <Tooltip title="Redux">
-        <IconContainer>
-          <ReduxIcon size={40} />
-        </IconContainer>
-      </Tooltip>
       <Tooltip title="Java">
         <IconContainer>
           <JavaIcon size={40} />
         </IconContainer>
       </Tooltip>
-      <Tooltip title="Spring Boot">
+      <Tooltip title=".NET">
         <IconContainer>
-          <SpringIcon size={40} />
+          <DotNetICcon size={40} />
         </IconContainer>
       </Tooltip>
-      <Tooltip title="Python">
+      <Tooltip title="AWS">
         <IconContainer>
-          <PythonIcon size={40} />
-        </IconContainer>
-      </Tooltip>
-      <Tooltip title="Flask">
-        <IconContainer>
-          <FlaskIcon size={40} />
+          <AWSIcon size={40} />
         </IconContainer>
       </Tooltip>
       <Tooltip title="Git">
         <IconContainer>
           <GitIcon size={40} />
-        </IconContainer>
-      </Tooltip>
-      <Tooltip title="Jira">
-        <IconContainer>
-          <JiraIcon size={40} />
-        </IconContainer>
-      </Tooltip>
-      <Tooltip title="Pokemon??">
-        <IconContainer>
-          <PokemonIcon size={40} />
         </IconContainer>
       </Tooltip>
     </SkillsIconGroup>

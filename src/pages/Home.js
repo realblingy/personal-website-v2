@@ -6,7 +6,7 @@ import { Element } from 'react-scroll';
 import { Grow, Tooltip } from '@material-ui/core';
 import { AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 import SakuraGif from '../assets/sakura.gif'
-import ProfileImage from '../assets/Me.png'
+import ProfileImage from '../assets/Me.jpeg'
 import Typewriter from 'typewriter-effect';
 
 const HomeContainer = styled.section`
@@ -164,9 +164,8 @@ const ALink = styled.a`
 `
 
 const thoughts = [
-    'Founder of Astro Learning',
-    'Software Developer @ nib',
-    'React/TypeScript/Node.js',
+    'Software Engineer @ Vamp',
+    'React/TypeScript/Node.js + more',
     'Plat IV League of Legends Player',
 ]
 

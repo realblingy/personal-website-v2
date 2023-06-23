@@ -81,22 +81,10 @@ const ProjectTitle = styled.h1`
 
 const projects = [
   {
-    title: "Astro Learning",
-    body: "My tutoring business that's located in Southwest Sydney. We have over 10+ students enrolled and still growing!",
-    image: AstroLearningImg,
-    link: "https://www.astrolearning.com.au/",
-  },
-  {
     title: "PTP Network",
     body: "A network protocol that implements a subset of TCP's featured. It includes triple duplicate ACK fast retransmit, packet loss simulation and sequence numbers.",
     link: "https://github.com/realblingy/COMP3331",
     image: PTPImg,
-  },
-  {
-    title: "HODL Genie",
-    body: "Funny web app that advises people to either buy, hold or sell stocks using AlphaVantage's API. (NOTE: THIS IS NO LONGER MAINTAINED)",
-    link: "https://agitated-kalam-ca2112.netlify.app/",
-    image: WSBImg,
   },
   {
     title: "TaskMaster",

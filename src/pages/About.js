@@ -98,42 +98,33 @@ const renderTimelineContent = (date, job, description, image) => {
 
 const jobs = [
   {
-    date: "Aug 2022 - Present",
-    job: "Software Developer - nib Health Group",
-    description: `Full-stack role working on a React, .NET and TypeScript environment.`,
+    date: "Jul 2023 - Present",
+    job: "Software Engineer - Vamp",
+    description: `
+      TBA - Just started the role :)
+      `,
+    image:
+      "https://play-lh.googleusercontent.com/nRBcVwE6UJXFMwWtgBvSI2DRMzTTMTL2eT671vjkbM6T3ESkYcXkayda7f9776yd8Pk"
+  },
+  {
+    date: "Aug 2022 - Jul 2023",
+    job: "Software Developer - nib Health Group (ASX:200 Company)",
+    description: `
+      Full-stack role working in a TypeScript and .NET environment.
+      Built self-service software so customers could view and change their personal data.
+      `,
     image:
       "https://hunterheadline.com.au/wp-content/uploads/2016/10/NIB.jpg"
   },
   {
-    date: "Feb 2022 - Present",
-    job: "Founder & Head Math Tutor - Astro Learning",
-    description: `Helping kids not hate Math :P`,
-    image: "https://scontent.fsyd10-2.fna.fbcdn.net/v/t39.30808-6/271548808_101560032423426_7550618777717685797_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fyu9NuU38uMAX-MuZ65&tn=roEr3Oz2rVCyZp3q&_nc_ht=scontent.fsyd10-2.fna&oh=00_AT8GYPdkbVpQiv_T9qULj5gkFUihwLMZ1K5o51sHfBtbBw&oe=635C3220"
-  },
-  {
     date: "Aug 2021 - Aug 2022",
-    job: "Junior Software Engineer - Workflow86",
+    job: "Junior Software Engineer - Workflow86 (Y-Combinator)",
     description: `Maintained and implemented new features to the existing software.
          Followed agile methodologies and worked with microservices architecture, CI/CD and
          AWS cloud technologies.
         `,
     image:
       "https://www.workflow86.com/wp-content/uploads/2021/06/logo-rounded.jpg",
-  },
-  {
-    date: "Jan 2019 - Present",
-    job: "Mathematics Tutor - Coaching First College",
-    description:
-      "Planned lessons, tracked homework records and taught high school Mathematics.",
-    image:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAUVBMVEVjo/INTqNmp/YASJ4ARp0KTKIESqBhofAVVKhGgtIPUKVoqfg5dMVVlOMqZbdenu0eW649eclOi9sybr9UkuEjX7Iwa71JhdUnYrUxbb4AP5iRgCObAAAELElEQVR4nO3c23ajIBgFYP05qaioMZrO+z/omKTt9ABKTGcEZn+rN73oWuyCnASzDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+MrrKTHNj1O33o8v0Y5YsZuhP50Jyxl5/ZNW19TwqHX9M0k3Z5pxJIfLPhJSMF1PZxFyZRGNdWcJ9ysnyaVb66KLuQqYv2Eq495BC8kupoqtKbV6Y3I73pyqnMaqKJDNxj+r7FJIV89HFfkDt0zy/YTKSlqrHyr99fqrGKY6EVPNd+ZY6HI4uuxdT7KvAa3cTQxVSI/c8gfeEdQQJaWB78y2NtDm6+Nto2PsIXhXhD4jPBZR9+I20eaKJ5jk3R5d/k9rdx1yJLvhGSt1TCWV5dIAtVHuMg+Iut/wvmDo6wQZqNnqZZfkginY61aep7XLGvoybog29n6FiNR6Tp9lkmu40qbF8qT6mDH7GRv1KGxW8Hb4vcEmb8szf/kweUepHqJWAvDWObnIJ2Ve3hZY4Bd5IV7oZUQ1rwwDR0C0Z2Rh4QuUc69ll84/12PEq8IDuKmS1xzhOeg5+xuZaMnkFjMHsaKRySiSgvtirUHShtz1fxjGdiWC14Km09zOyTKUKqbU30tBHgAfYq5DFtIW9bnT0pMlUoWPSHcO2iyearI9hOh1ppitrGy2SqULHrDuKDWxP9u0LGfqa/QGDtaNh6TyGjhlNFO+R/DjWhslMupeEJ1vC8DcH/dmHw+B3lh5gn3enNFiQdfkrU0p4tiZMZ1bqSJh+K/0PepqXhBLaR4tzQglr6/IwocWTY4nP00nomHnzCI7/+LIfg5Lp7LQ5TtGk1Jlm9s3EhPaDtf2MQgzn8Dw5dhMTmtWQ48WMSCahY7MtoVdPGble4qeT0PF2LaE14uyoxHTmNcrxllsUR5fsp7iaaTpnMRxT0wU7+UWkJvDzs+QI6BmRspoHflB/5eylPKuNHpWozGXO/01Jd1s5fCny9bOJWXm7B8aGsIeW1UPe7Oy6PEnUnF7vYYY/eK5e9uXnOft6SHj5ffxwjTb4rSsqV2+TCCnbflT0zgx9K/nHig/+haPeum0hJOOiO7dTe+kq9u2sfgQTION1Jej1voVF+EuRjXa6nT38d6p62nt59FXwCbPsuYtP4T+Iy7hfPRMxih1W80zEOLaunooY+OT7jtTuu+rRHKOiafegEctROF0++s2PN9G8+yfT7fruR56HfxP4jS7lnqdR/Dq64P5I1Q98fuceT/I2giH/jyWjfOALGYKJ2nUNM1iUzR33CimYnCy3aGOgTb8Rclk0sq4esyjj3RCpoe4Yl18/aSaun2tjVdsPSsdZfR+Qzpq5n86FvH5u7/bNPVFcpn4eTWKfFtQ6U+ZKZVqnlA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4If8BtRjJuGDr6/CAAAAAElFTkSuQmCC",
-  },
-  {
-    date: "Apr 2021 - Jul 2021",
-    job: "Web Application Developer Intern - Streamplate",
-    description:
-      "Developed a web app that replicated the company's phone app and set up the CI/CD for it.",
-    image: "https://streamplate.com/images/Union.svg",
   },
   {
     date: "Jun 2020 - Oct 2020",
@@ -176,17 +167,21 @@ function About({ ref }) {
               <h3>Bio</h3>
               <p>
                 Hey everyone! I’m a Computer Science graduate of the University
-                of New South Wales, currently working as a Software Developer at nib Health Group. I
-                also started my own tutoring business, Astro Learning, which is based in 
-                south west Sydney.
+                of New South Wales, currently working as a Software Developer at Vamp.
               </p>
               <p>
-                I’m have a keen interest in web development, with industrial
-                experience with React, Node.js, Spring Boot, MongoDB,
-                PostgreSQL, and many other technologies.
+                I have a keen interest in anything with web development. I have industrial
+                experience with React, Node.js, TypeScript, AWS, and many other technologies.
               </p>
               <p>
-                In my spare time, I play League of Legends and hang out with my mates.
+                In my spare time, I'm always looking out to learn new technologies. As of now
+                my learning has been focused on static site generation and headless CMS. I plan to use this information to hopefully
+                open my own web development agency and develop websites for small to medium businesses. I'm also learning
+                system design on the side, mainly with AWS cloud infrastructure.
+              </p>
+              <p>
+                If you want to know my hobbies, I'm quite a plain person. I mainly just go gym,
+                eat out with mates and watch Netflix.
               </p>
               <h3>Work Experience</h3>
             </div>
