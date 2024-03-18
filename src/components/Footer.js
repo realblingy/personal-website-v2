@@ -14,7 +14,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
     return (
         <FooterContainer>
-            James Dang - www.jamespdang.com
+            James Dang - Certified Banh Mi Demolisher
         </FooterContainer>
     )
 }

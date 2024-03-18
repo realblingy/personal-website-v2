@@ -98,10 +98,10 @@ const renderTimelineContent = (date, job, description, image) => {
 
 const jobs = [
   {
-    date: "Jul 2023 - Present",
+    date: "Jul 2023 - Dec 2023",
     job: "Software Engineer - Vamp",
     description: `
-      TBA - Just started the role :)
+      Participated in sprint planning, daily stand-ups, and retrospectives to drive continuous improvement. Expanded internal tools to better support non-technical stakeholders and developed comprehensive tests integrated into the CI/CD pipeline for enhanced code quality. Also, engineered new enhancements for both the company's website and mobile app.
       `,
     image:
       "https://play-lh.googleusercontent.com/nRBcVwE6UJXFMwWtgBvSI2DRMzTTMTL2eT671vjkbM6T3ESkYcXkayda7f9776yd8Pk"
@@ -110,8 +110,7 @@ const jobs = [
     date: "Aug 2022 - Jul 2023",
     job: "Software Developer - nib Health Group (ASX:200 Company)",
     description: `
-      Full-stack role working in a TypeScript and .NET environment.
-      Built self-service software so customers could view and change their personal data.
+      Played a pivotal role in engineering product-focused software serving over a million Australian customers. Led the migration of multiple services from legacy .NET/Angular code to a modern NodeJS tech stack, developed and published npm packages for consumption by Nib's services, and troubleshooted bugs reported by the support team, deploying hotfixes as necessary.
       `,
     image:
       "https://hunterheadline.com.au/wp-content/uploads/2016/10/NIB.jpg"
@@ -119,22 +118,13 @@ const jobs = [
   {
     date: "Aug 2021 - Aug 2022",
     job: "Junior Software Engineer - Workflow86 (Y-Combinator)",
-    description: `Maintained and implemented new features to the existing software.
-         Followed agile methodologies and worked with microservices architecture, CI/CD and
-         AWS cloud technologies.
+    description: `
+    During my tenure at Workflow86 (YC W22) as a Software Engineer, I worked in a full-stack environment utilizing React.js, Spring Boot, MongoDB, PostgreSQL, and AWS. I contributed to the development and design of new features for integration into the company's product line and conducted refactoring of legacy code to ensure implementation of high-quality code and standards.
         `,
     image:
       "https://www.workflow86.com/wp-content/uploads/2021/06/logo-rounded.jpg",
   },
-  {
-    date: "Jun 2020 - Oct 2020",
-    job: "Software Developer Intern - Success Tutoring",
-    description:
-      "Built the frontend and backend for a self-serve kiosk to automate adminsitrative tasks.",
-    image:
-      "https://static.wixstatic.com/media/c6cedf_152aa6dc87cb420292dddb27ce9cfc79~mv2.png/v1/fill/w_228,h_170,al_c,q_85,usm_0.66_1.00_0.01/Logo%20-%20Success%20Tutoring.webp",
-  },
-];
+  ];
 
 function About({ ref }) {
   const [loaded, setLoaded] = useState(false);
@@ -166,22 +156,13 @@ function About({ ref }) {
             <div>
               <h3>Bio</h3>
               <p>
-                Hey everyone! I’m a Computer Science graduate of the University
-                of New South Wales, currently working as a Software Developer at Vamp.
+                Hello! I'm James, a Software Engineer and Computer Science graduate from the University of New South Wales. Specializing in web development, I excel in technologies like React for frontend and Node.js for backend, along with TypeScript and Git.
               </p>
               <p>
-                I have a keen interest in anything with web development. I have industrial
-                experience with React, Node.js, TypeScript, AWS, and many other technologies.
+                With a passion for innovation and a drive for continuous learning, I've honed my skills in crafting scalable and responsive full-stack applications. From building sleek user interfaces with React to architecting robust backend systems with Node.js, I thrive on tackling complex challenges and delivering high-quality solutions.
               </p>
               <p>
-                In my spare time, I'm always looking out to learn new technologies. As of now
-                my learning has been focused on static site generation and headless CMS. I plan to use this information to hopefully
-                open my own web development agency and develop websites for small to medium businesses. I'm also learning
-                system design on the side, mainly with AWS cloud infrastructure.
-              </p>
-              <p>
-                If you want to know my hobbies, I'm quite a plain person. I mainly just go gym,
-                eat out with mates and watch Netflix.
+              Outside of work, I enjoy staying active, exploring new cuisines, and relaxing while watching Netflix. As a dedicated professional with a collaborative mindset, I'm committed to pushing the boundaries of what's possible in software engineering and making meaningful contributions to the field.
               </p>
               <h3>Work Experience</h3>
             </div>
@@ -199,7 +180,7 @@ function About({ ref }) {
           </Timeline>
           <Grow in={loaded} timeout={1500}>
             <div>
-              <h3>Skills</h3>
+              <h3>A few technologies I know</h3>
               <SkillIcons />
             </div>
           </Grow>

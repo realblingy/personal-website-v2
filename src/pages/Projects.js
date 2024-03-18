@@ -116,7 +116,7 @@ const Projects = () => {
           onChange={(isVisible) => !loaded && setLoaded(isVisible)}
         >
           <Grow in={loaded} timeout={1000}>
-            <ProjectTitle>Projects</ProjectTitle>
+            <ProjectTitle>Personal Projects</ProjectTitle>
           </Grow>
         </ReactVisibilitySensor>
         <ProjectsCarouselContainer>
